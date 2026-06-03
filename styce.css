@@ -1,0 +1,148 @@
+/* Configurações Globais e Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+    --bg-color: #f4f7f6;
+    --text-color: #333;
+    --header-bg: #2c3e50;
+    --header-text: #fff;
+    --primary-color: #3498db;
+    --primary-hover: #2980b9;
+}
+
+/* Classe que o JavaScript vai injetar no body para o Modo Escuro */
+body.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #f4f7f6;
+    --header-bg: #111;
+    --header-text: #3498db;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header / Navbar */
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+#theme-toggle {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: inherit;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#theme-toggle:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Conteúdo Principal */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05));
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.btn-principal {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-principal:hover {
+    background-color: var(--primary-hover);
+}
+
+.sobre {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.contador-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 8px;
+    display: inline-block;
+}
+
+body.dark-mode .contador-container {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+#contador {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--header-bg);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+  }
